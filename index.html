@@ -10,8 +10,6 @@
 @media(prefers-color-scheme:dark){:root{--bg:#1e1e1c;--bg2:#2a2a27;--bg3:#323230;--text:#e8e7e0;--text2:#9e9d96;--text3:#6b6b64;--border:#3a3a36;--border2:#4a4a46;--border3:#5a5a54;--sbg:#173404;--stxt:#c0dd97;--sbrd:#3b6d11;--ibg:#042c53;--itxt:#b5d4f4;--ibrd:#185fa5;--dbg:#501313;--dtxt:#f7c1c1;--dbrd:#a32d2d;--wbg:#412402;--wtxt:#fac775;--wbrd:#854f0b}}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg3);color:var(--text);min-height:100vh}
 .wrap{max-width:680px;margin:0 auto;padding:1rem;min-height:100vh}
-
-/* HEADER */
 .hdr{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;padding:.875rem 1rem;background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-xl)}
 .logo{width:32px;height:32px;border-radius:var(--r-md);background:#E24B4A;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
@@ -24,60 +22,60 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .gbadge.off{background:var(--bg2);color:var(--text3);border:0.5px solid var(--border)}
 .btn-login{font-size:12px;padding:6px 12px;border-radius:var(--r-md);border:0.5px solid var(--ibrd);background:var(--ibg);color:var(--itxt);cursor:pointer;font-weight:500;display:flex;align-items:center;gap:5px;white-space:nowrap}
 .btn-logout{font-size:11px;padding:4px 8px;border-radius:var(--r-md);border:0.5px solid var(--border);background:transparent;color:var(--text3);cursor:pointer}
-
-/* NAV */
 .nav{display:flex;margin-bottom:1rem;border:0.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--bg2)}
 .nb{flex:1;padding:9px 4px;font-size:12px;font-weight:500;border:none;background:transparent;color:var(--text2);cursor:pointer;border-right:0.5px solid var(--border)}
 .nb:last-child{border-right:none}
 .nb.on{background:var(--bg);color:var(--text);font-weight:600}
-
-/* SYNC BAR */
 .sync-bar{font-size:11px;color:var(--text2);padding:6px 10px;background:var(--bg2);border-radius:var(--r-md);margin-bottom:.75rem;display:none;text-align:center}
 .sync-bar.show{display:block}
 
 /* ADD FORM */
 .add-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:1.25rem;margin-bottom:1rem}
-.add-card-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:1rem}
-
+.add-title{font-size:13px;font-weight:600;margin-bottom:1rem}
 .voice-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:1rem}
 textarea.ftxt{flex:1;resize:none;min-height:56px;font-size:14px;padding:10px 12px;border-radius:var(--r-md);border:0.5px solid var(--border);background:var(--bg2);color:var(--text);font-family:inherit;line-height:1.5;outline:none}
 textarea.ftxt:focus{border-color:var(--border3)}
 textarea.ftxt::placeholder{color:var(--text3);font-size:13px}
-.mic{width:44px;height:44px;border-radius:50%;border:0.5px solid var(--border);background:var(--bg2);cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--text2);transition:all .15s}
-.mic:hover{background:var(--bg3)}
+.mic-wrap{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
+.mic{width:44px;height:44px;border-radius:50%;border:0.5px solid var(--border);background:var(--bg2);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text2)}
 .mic.rec{background:var(--dbg);border-color:var(--dbrd);color:var(--dtxt)}
 .mic svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5}
-.mic-label{font-size:10px;color:var(--text3);text-align:center;margin-top:3px}
-
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem}
-.form-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:1rem}
+.mic-lbl{font-size:10px;color:var(--text3)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.fg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
 .ff{display:flex;flex-direction:column;gap:4px}
 .fl{font-size:11px;font-weight:500;color:var(--text2)}
-select.fs,input.fi{font-size:13px;padding:8px 10px;border:0.5px solid var(--border);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;width:100%;outline:none;transition:border-color .12s}
+select.fs,input.fi{font-size:13px;padding:8px 10px;border:0.5px solid var(--border);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;width:100%;outline:none}
 select.fs:focus,input.fi:focus{border-color:var(--border3)}
+.time-hint{font-size:11px;color:var(--itxt);margin-top:3px;min-height:14px}
+.btn-save{width:100%;padding:11px;border-radius:var(--r-md);border:0.5px solid var(--sbrd);background:var(--sbg);color:var(--stxt);font-size:14px;font-weight:600;cursor:pointer}
+.btn-save:disabled{opacity:.5;cursor:default}
+.smsg{font-size:12px;text-align:center;margin-top:8px;min-height:16px}
+.smsg.ok{color:var(--stxt)}
+.smsg.err{color:var(--dtxt)}
 
-.btn-save-task{width:100%;padding:11px;border-radius:var(--r-md);border:0.5px solid var(--sbrd);background:var(--sbg);color:var(--stxt);font-size:14px;font-weight:600;cursor:pointer;transition:opacity .15s}
-.btn-save-task:disabled{opacity:.5;cursor:default}
-.save-msg{font-size:12px;text-align:center;margin-top:8px;min-height:16px}
-.save-ok{color:var(--stxt)}
-.save-err{color:var(--dtxt)}
+/* SORT BAR */
+.sort-bar{display:flex;align-items:center;gap:8px;margin-bottom:.75rem}
+.sort-lbl{font-size:11px;color:var(--text3)}
+.sort-btn{font-size:11px;padding:3px 9px;border-radius:9px;border:0.5px solid var(--border);background:var(--bg);color:var(--text2);cursor:pointer;white-space:nowrap}
+.sort-btn.on{background:var(--bg2);color:var(--text);border-color:var(--border3);font-weight:500}
 
 /* FILTERS */
-.filters{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:1rem}
+.filters{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:.75rem}
 .fb{font-size:11px;padding:4px 9px;border-radius:10px;border:0.5px solid var(--border);background:var(--bg);color:var(--text2);cursor:pointer;white-space:nowrap}
 .fb.on{background:var(--bg2);color:var(--text);border-color:var(--border3);font-weight:500}
 
-/* TASK LIST */
+/* TASK */
 .sec{margin-bottom:1.25rem}
 .sec-hd{display:flex;align-items:center;gap:7px;margin-bottom:.5rem}
 .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .sec-lbl{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
 .sec-ct{font-size:11px;color:var(--text3);margin-left:auto}
-.task{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-md);padding:10px 12px;margin-bottom:5px;transition:border-color .12s}
+.task{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-md);padding:10px 12px;margin-bottom:5px}
 .task:hover{border-color:var(--border2)}
+.task.subtask-item{margin-left:20px;border-left:2px solid var(--border2);border-radius:0 var(--r-md) var(--r-md) 0;padding-left:10px}
 .task-top{display:flex;align-items:flex-start;gap:9px}
-.chk{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border2);flex-shrink:0;margin-top:2px;cursor:pointer;transition:all .15s}
-.chk:hover{border-color:var(--border3)}
+.chk{width:15px;height:15px;border-radius:50%;border:1.5px solid var(--border2);flex-shrink:0;margin-top:2px;cursor:pointer}
 .task.done .chk{background:var(--sbg);border-color:var(--sbrd)}
 .task.done .ttl{text-decoration:line-through;color:var(--text3)}
 .tbody{flex:1;min-width:0}
@@ -90,28 +88,38 @@ select.fs:focus,input.fi:focus{border-color:var(--border3)}
 .b-ev{background:var(--ibg);color:var(--itxt)}
 .b-tk{background:#EEEDFE;color:#534AB7}
 .b-dt{background:var(--bg2);color:var(--text2)}
+.b-sub{background:var(--bg2);color:var(--text3)}
 .tacts{display:flex;gap:3px;margin-left:auto;flex-shrink:0}
-.ta{width:28px;height:28px;border-radius:var(--r-md);border:0.5px solid var(--border);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text2)}
+.ta{width:26px;height:26px;border-radius:var(--r-md);border:0.5px solid var(--border);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text2)}
 .ta:hover{background:var(--bg2)}
-.ta svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5}
+.ta svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.5}
+.subtasks-list{margin-top:6px;padding-top:6px;border-top:0.5px solid var(--border)}
+.sub-toggle{font-size:10px;color:var(--itxt);cursor:pointer;background:none;border:none;padding:0;margin-top:2px;font-family:inherit}
 
 /* EDIT PANEL */
 .ep{margin-top:9px;padding-top:9px;border-top:0.5px solid var(--border);display:none}
 .ep.open{display:block}
-.ep-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
-.ep-grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
+.ep-fg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.ep-fg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
 .ef{display:flex;flex-direction:column;gap:3px}
 .el{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em}
-textarea.etxt{width:100%;resize:vertical;min-height:48px;font-size:12px;padding:7px 9px;border-radius:var(--r-md);border:0.5px solid var(--border);background:var(--bg2);color:var(--text);font-family:inherit;line-height:1.5;outline:none;margin-bottom:8px}
+textarea.etxt{width:100%;resize:vertical;min-height:44px;font-size:12px;padding:7px 9px;border-radius:var(--r-md);border:0.5px solid var(--border);background:var(--bg2);color:var(--text);font-family:inherit;line-height:1.5;outline:none;margin-bottom:7px}
 select.es,input.ed{font-size:12px;padding:5px 7px;border:0.5px solid var(--border);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;width:100%;outline:none}
 .ebtns{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
 .btn-sv{font-size:12px;padding:5px 12px;border-radius:var(--r-md);border:0.5px solid var(--sbrd);background:var(--sbg);color:var(--stxt);cursor:pointer;font-weight:500}
 .btn-sv:disabled{opacity:.5;cursor:default}
 .btn-del{font-size:12px;padding:5px 12px;border-radius:var(--r-md);border:0.5px solid var(--dbrd);background:var(--dbg);color:var(--dtxt);cursor:pointer;font-weight:500}
 .btn-cn{font-size:12px;padding:5px 12px;border-radius:var(--r-md);border:0.5px solid var(--border);background:transparent;color:var(--text2);cursor:pointer}
+.btn-addsub{font-size:12px;padding:5px 12px;border-radius:var(--r-md);border:0.5px solid var(--ibrd);background:var(--ibg);color:var(--itxt);cursor:pointer;font-weight:500}
 .emsg{font-size:11px;color:var(--stxt);margin-top:4px;min-height:14px}
 
-/* CATEGORIES */
+/* ADD SUBTASK INLINE */
+.addsub-row{display:flex;gap:6px;margin-top:8px;padding-top:8px;border-top:0.5px solid var(--border)}
+input.sub-input{flex:1;font-size:12px;padding:6px 9px;border:0.5px solid var(--border);border-radius:var(--r-md);background:var(--bg2);color:var(--text);font-family:inherit;outline:none}
+input.sub-input:focus{border-color:var(--border3)}
+.btn-sub-add{font-size:12px;padding:6px 12px;border-radius:var(--r-md);border:0.5px solid var(--ibrd);background:var(--ibg);color:var(--itxt);cursor:pointer;white-space:nowrap}
+
+/* CATS */
 .cat-panel{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:1rem;margin-bottom:1rem}
 .ci{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:0.5px solid var(--border)}
 .ci:last-child{border-bottom:none}
@@ -132,19 +140,13 @@ select.es,input.ed{font-size:12px;padding:5px 7px;border:0.5px solid var(--borde
 .sc-title{font-size:13px;font-weight:600;margin-bottom:.5rem}
 .sc-desc{font-size:12px;color:var(--text2);margin-bottom:.875rem;line-height:1.6}
 .btn-act{font-size:12px;padding:7px 14px;border-radius:var(--r-md);border:0.5px solid var(--border);background:var(--bg);color:var(--text);cursor:pointer;font-weight:500;margin-right:6px}
-
 .empty{font-size:13px;color:var(--text3);padding:2rem 0;text-align:center}
-
-@media(max-width:480px){
-  .form-grid-3,.ep-grid3{grid-template-columns:1fr 1fr}
-  .wrap{padding:.75rem}
-}
+@media(max-width:480px){.fg3,.ep-fg3{grid-template-columns:1fr 1fr}.wrap{padding:.75rem}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- HEADER -->
 <div class="hdr">
   <div class="logo"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
   <div class="hdr-info"><div class="hdr-title">Task Manager</div><div class="hdr-sub">Giulio Romano</div></div>
@@ -158,7 +160,6 @@ select.es,input.ed{font-size:12px;padding:5px 7px;border:0.5px solid var(--borde
   </div>
 </div>
 
-<!-- NAV -->
 <div class="nav">
   <button class="nb on" onclick="showTab('tasks')">Task</button>
   <button class="nb" onclick="showTab('add')">+ Aggiungi</button>
@@ -166,69 +167,64 @@ select.es,input.ed{font-size:12px;padding:5px 7px;border:0.5px solid var(--borde
   <button class="nb" onclick="showTab('settings')">Impostazioni</button>
 </div>
 
-<!-- TAB: TASK LIST -->
+<!-- TASKS -->
 <div id="tab-tasks">
   <div class="sync-bar" id="syncBar">Sincronizzazione in corso...</div>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:.75rem;flex-wrap:wrap">
+    <span style="font-size:11px;color:var(--text3)">Ordina:</span>
+    <button class="sort-btn on" id="sort-urgency" onclick="setSort('urgency')">Urgenza</button>
+    <button class="sort-btn" id="sort-date" onclick="setSort('date')">Data</button>
+    <button class="sort-btn" id="sort-cat" onclick="setSort('cat')">Categoria</button>
+  </div>
   <div class="filters" id="filterRow"></div>
   <div id="taskList"></div>
 </div>
 
-<!-- TAB: ADD -->
+<!-- ADD -->
 <div id="tab-add" style="display:none">
   <div class="add-card">
-    <div class="add-card-title">Nuovo elemento</div>
-
-    <!-- VOICE + TEXT INPUT -->
+    <div class="add-title">Nuovo elemento</div>
     <div class="voice-row">
       <textarea class="ftxt" id="newTitle" placeholder="Descrivi il task o l'evento..." rows="2"></textarea>
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <button class="mic" id="micBtn">
-          <svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3M9 22h6"/></svg>
-        </button>
-        <span class="mic-label" id="micLabel">Parla</span>
+      <div class="mic-wrap">
+        <button class="mic" id="micBtn"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3M9 22h6"/></svg></button>
+        <span class="mic-lbl" id="micLbl">Parla</span>
       </div>
     </div>
-
-    <!-- FIELDS -->
-    <div class="form-grid-3">
-      <div class="ff">
-        <label class="fl">Categoria</label>
-        <select class="fs" id="newCat"></select>
-      </div>
-      <div class="ff">
-        <label class="fl">Priorità</label>
+    <div class="fg">
+      <div class="ff"><label class="fl">Categoria</label><select class="fs" id="newCat"></select></div>
+      <div class="ff"><label class="fl">Priorità</label>
         <select class="fs" id="newPri">
           <option value="2">Media</option>
           <option value="1">Urgente</option>
           <option value="3">Bassa</option>
         </select>
       </div>
-      <div class="ff">
-        <label class="fl">Tipo</label>
-        <select class="fs" id="newType" onchange="toggleTimeField()">
-          <option value="task">Attività</option>
-          <option value="event">Evento</option>
-        </select>
-      </div>
     </div>
-
-    <div class="form-grid">
-      <div class="ff">
-        <label class="fl">Data (opzionale)</label>
-        <input type="date" class="fi" id="newDate">
-      </div>
-      <div class="ff" id="timeField">
-        <label class="fl">Ora (solo eventi)</label>
-        <input type="time" class="fi" id="newTime">
-      </div>
+    <div class="fg">
+      <div class="ff"><label class="fl">Data</label><input type="date" class="fi" id="newDate"></div>
+      <div class="ff"><label class="fl">Ora <span style="color:var(--text3);font-weight:400">(→ crea evento)</span></label><input type="time" class="fi" id="newTime" oninput="updateTypeHint()"></div>
     </div>
-
-    <button class="btn-save-task" id="saveBtn" onclick="saveNewItem()">Salva su Google ↗</button>
-    <div class="save-msg" id="saveMsg"></div>
+    <div class="time-hint" id="typeHint"></div>
+    <div class="ff" style="margin-bottom:12px" id="reminderWrap">
+      <label class="fl">Preavviso</label>
+      <select class="fs" id="newReminder">
+        <option value="0">Nessuno</option>
+        <option value="10">10 minuti prima</option>
+        <option value="30">30 minuti prima</option>
+        <option value="60">1 ora prima</option>
+        <option value="1440">1 giorno prima</option>
+        <option value="2880">2 giorni prima</option>
+        <option value="7200">5 giorni prima</option>
+        <option value="10080">1 settimana prima</option>
+      </select>
+    </div>
+    <button class="btn-save" id="saveBtn" onclick="saveNewItem()">Salva su Google ↗</button>
+    <div class="smsg" id="smsg"></div>
   </div>
 </div>
 
-<!-- TAB: CATEGORIES -->
+<!-- CATS -->
 <div id="tab-cats" style="display:none">
   <div class="cat-panel">
     <div id="catList"></div>
@@ -240,67 +236,50 @@ select.es,input.ed{font-size:12px;padding:5px 7px;border:0.5px solid var(--borde
   </div>
 </div>
 
-<!-- TAB: SETTINGS -->
+<!-- SETTINGS -->
 <div id="tab-settings" style="display:none">
   <div class="sc">
     <div class="sc-title">Account Google</div>
-    <div class="sc-desc" id="settingsDesc">Accedi con Google per sincronizzare tutto su Calendar e Tasks.</div>
+    <div class="sc-desc" id="settingsDesc">Accedi con Google per sincronizzare su Calendar e Tasks.</div>
     <div id="settingsBtn"><button class="btn-act" onclick="googleLogin()">Accedi con Google</button></div>
   </div>
   <div class="sc">
     <div class="sc-title">Come funziona</div>
-    <div class="sc-desc">Gli <strong>eventi</strong> (con data e ora) vengono salvati in Google Calendar. Le <strong>attività</strong> vengono salvate in Google Tasks nella lista "Task Manager". Tutto è visibile anche direttamente dalle app Google.</div>
+    <div class="sc-desc">Se imposti un <strong>orario</strong> viene creato un <strong>Evento</strong> in Google Calendar con preavviso. Altrimenti viene creata un'<strong>Attività</strong> in Google Tasks. I sotto-task sono attività figlie del task padre in Google Tasks.</div>
   </div>
   <div class="sc">
     <div class="sc-title">Categorie</div>
-    <div class="sc-desc">Le categorie sono salvate localmente. Esportale per non perderle se cambi dispositivo.</div>
+    <div class="sc-desc">Salvate localmente. Esportale per non perderle.</div>
     <button class="btn-act" onclick="exportCats()">Esporta</button>
     <button class="btn-act" onclick="importCats()">Importa</button>
   </div>
 </div>
 
 </div>
-
 <script>
 const CLIENT_ID='746042191192-9shjoac1vrgik2tpt04tobj7jc6f4pel.apps.googleusercontent.com';
 const REDIRECT_URI='https://giulioromano85-ai.github.io/task-manager/';
 const SCOPES='https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/tasks';
 const CAL_ID='primary';
 const TASKLIST_NAME='Task Manager';
-const SK_CATS='gm_cats_v3',SK_TOK='gm_tok_v3',SK_EXP='gm_exp_v3',SK_LIST='gm_list_v3';
-
+const SK_CATS='gm_cats_v4',SK_TOK='gm_tok_v4',SK_EXP='gm_exp_v4',SK_LIST='gm_list_v4';
 let tok=null,tokExp=0,tokTimer=null,taskListId=null;
-let cats=loadCats(),items=[],editingId=null,activeFilter='tutti';
+let cats=loadCats(),items=[],editingId=null,activeFilter='tutti',sortMode='urgency';
 
-/* ===== CATEGORIES ===== */
-function defCats(){return[
-  {id:'fb',label:'Offerta F&B',color:'#E24B4A'},
-  {id:'sala',label:'Sala & Operativo',color:'#185FA5'},
-  {id:'team',label:'Team & HR',color:'#854F0B'},
-  {id:'gestione',label:'Gestione & Admin',color:'#3B6D11'},
-  {id:'fornitori',label:'Fornitori & Acquisti',color:'#534AB7'},
-  {id:'comunicazione',label:'Comunicazione',color:'#0F6E56'},
-  {id:'maria',label:'Da discutere con Maria',color:'#D4537E'},
-  {id:'laura',label:'Da discutere con Laura',color:'#1D9E75'},
-  {id:'max',label:'Da discutere con Max',color:'#BA7517'},
-  {id:'personale',label:'Personale',color:'#888780'},
-];}
+/* CATS */
+function defCats(){return[{id:'fb',label:'Offerta F&B',color:'#E24B4A'},{id:'sala',label:'Sala & Operativo',color:'#185FA5'},{id:'team',label:'Team & HR',color:'#854F0B'},{id:'gestione',label:'Gestione & Admin',color:'#3B6D11'},{id:'fornitori',label:'Fornitori & Acquisti',color:'#534AB7'},{id:'comunicazione',label:'Comunicazione',color:'#0F6E56'},{id:'maria',label:'Da discutere con Maria',color:'#D4537E'},{id:'laura',label:'Da discutere con Laura',color:'#1D9E75'},{id:'max',label:'Da discutere con Max',color:'#BA7517'},{id:'personale',label:'Personale',color:'#888780'}];}
 function loadCats(){try{const s=localStorage.getItem(SK_CATS);return s?JSON.parse(s):defCats();}catch(e){return defCats();}}
 function saveCats(){try{localStorage.setItem(SK_CATS,JSON.stringify(cats));}catch(e){}}
 function catById(id){return cats.find(c=>c.id===id)||{label:id||'—',color:'#888'};}
 function catOpts(sel){return cats.map(c=>`<option value="${c.id}" ${c.id===sel?'selected':''}>${c.label}</option>`).join('');}
-function populateCatDropdowns(){
-  const el=document.getElementById('newCat');
-  if(el) el.innerHTML=catOpts(el.value||cats[0]?.id||'');
-}
+function populateDropdowns(){const el=document.getElementById('newCat');if(el)el.innerHTML=catOpts(el.value||cats[0]?.id||'');}
 function exportCats(){const b=new Blob([JSON.stringify(cats,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='categorie.json';a.click();}
-function importCats(){const i=document.createElement('input');i.type='file';i.accept='.json';i.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(Array.isArray(d)){cats=d;saveCats();renderCats();populateCatDropdowns();render();}}catch(e){alert('File non valido.');}};r.readAsText(f);};i.click();}
+function importCats(){const i=document.createElement('input');i.type='file';i.accept='.json';i.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(Array.isArray(d)){cats=d;saveCats();renderCats();populateDropdowns();render();}}catch(e){alert('File non valido.');}};r.readAsText(f);};i.click();}
 
-/* ===== AUTH ===== */
+/* AUTH */
 function googleLogin(){window.location.href='https://accounts.google.com/o/oauth2/v2/auth?'+new URLSearchParams({client_id:CLIENT_ID,redirect_uri:REDIRECT_URI,response_type:'token',scope:SCOPES,prompt:'select_account'});}
 function googleLogout(){tok=null;tokExp=0;taskListId=null;items=[];localStorage.removeItem(SK_TOK);localStorage.removeItem(SK_EXP);if(tokTimer)clearTimeout(tokTimer);updateAuthUI(false);render();}
 function isAuth(){return!!(tok&&Date.now()<tokExp-10000);}
-
 function handleCallback(){
   const h=window.location.hash;
   if(h&&h.includes('access_token')){
@@ -318,11 +297,11 @@ function updateAuthUI(on){
   document.getElementById('loginBtn').style.display=on?'none':'flex';
   document.getElementById('logoutBtn').style.display=on?'block':'none';
   const d=document.getElementById('settingsDesc'),b=document.getElementById('settingsBtn');
-  if(d)d.textContent=on?'Account Google connesso. Tutti i dati sono sincronizzati in tempo reale.':'Accedi con Google per sincronizzare su Calendar e Tasks.';
+  if(d)d.textContent=on?'Account Google connesso.':'Accedi con Google per sincronizzare.';
   if(b)b.innerHTML=on?'<button class="btn-act" onclick="googleLogout()">Disconnetti</button>':'<button class="btn-act" onclick="googleLogin()">Accedi con Google</button>';
 }
 
-/* ===== API ===== */
+/* API */
 async function gf(url,opts={}){
   if(!isAuth())throw new Error('Non connesso');
   const r=await fetch(url,{...opts,headers:{'Authorization':'Bearer '+tok,'Content-Type':'application/json',...(opts.headers||{})}});
@@ -338,18 +317,18 @@ async function ensureList(){
   localStorage.setItem(SK_LIST,taskListId);return taskListId;
 }
 
-/* ===== ENCODING ===== */
+/* ENCODING */
 function parseT(raw){const m=raw&&raw.match(/^\[([^\]]+)\]\s*(.*)/s);return m?{cat:m[1],title:m[2].trim()}:{cat:'personale',title:(raw||'').trim()};}
 function encT(cat,title){return`[${cat}] ${title}`;}
 function parsePri(notes){if(!notes)return 2;const m=notes.match(/PRI:(\d)/);return m?parseInt(m[1]):2;}
 function buildNotes(pri){return`PRI:${pri}`;}
 
-/* ===== LOAD ===== */
+/* LOAD */
 async function loadAll(){
   document.getElementById('syncBar').className='sync-bar show';
   try{
     const[evs,tks]=await Promise.all([loadEvents(),loadTasks()]);
-    items=[...evs,...tks].sort((a,b)=>{if(!a.date&&!b.date)return 0;if(!a.date)return 1;if(!b.date)return-1;return a.date.localeCompare(b.date);});
+    items=[...evs,...tks];
     render();
   }catch(e){document.getElementById('taskList').innerHTML=`<p class="empty">Errore: ${e.message}</p>`;}
   document.getElementById('syncBar').className='sync-bar';
@@ -361,39 +340,76 @@ async function loadEvents(){
   const d=await gf(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CAL_ID)}/events?`+new URLSearchParams({timeMin:tMin,timeMax:tMax,maxResults:500,singleEvents:'true',orderBy:'startTime'}));
   return(d.items||[]).filter(e=>e.summary&&e.summary.startsWith('[')).map(e=>{
     const{cat,title}=parseT(e.summary);const hasTime=!!e.start?.dateTime;
-    return{gid:e.id,gtype:'event',cat,title,done:false,date:hasTime?e.start.dateTime.split('T')[0]:e.start?.date||'',time:hasTime?e.start.dateTime.split('T')[1]?.substring(0,5):'',priority:parsePri(e.description),expanded:false};
+    return{gid:e.id,gtype:'event',cat,title,done:false,date:hasTime?e.start.dateTime.split('T')[0]:e.start?.date||'',time:hasTime?e.start.dateTime.split('T')[1]?.substring(0,5):'',priority:parsePri(e.description),expanded:false,subtasks:[]};
   });
 }
 async function loadTasks(){
   const lid=await ensureList();
-  const d=await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks?maxResults=100&showCompleted=false`);
-  return(d.items||[]).filter(t=>t.title&&t.title.startsWith('[')).map(t=>{
+  const d=await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks?maxResults=200&showCompleted=false`);
+  const all=d.items||[];
+  // separate parents and children
+  const parents=all.filter(t=>!t.parent&&t.title&&t.title.startsWith('['));
+  const children=all.filter(t=>t.parent);
+  return parents.map(t=>{
     const{cat,title}=parseT(t.title);
-    return{gid:t.id,gtype:'task',cat,title,done:t.status==='completed',date:t.due?t.due.split('T')[0]:'',time:'',priority:parsePri(t.notes),expanded:false};
+    const subs=children.filter(c=>c.parent===t.id).map(c=>({gid:c.id,title:c.title,done:c.status==='completed'}));
+    return{gid:t.id,gtype:'task',cat,title,done:t.status==='completed',date:t.due?t.due.split('T')[0]:'',time:'',priority:parsePri(t.notes),expanded:false,subtasks:subs};
   });
 }
 
-/* ===== CREATE ===== */
+/* SORT */
+function sortItems(arr){
+  const priOrder={1:0,2:1,3:2};
+  if(sortMode==='urgency'){
+    return[...arr].sort((a,b)=>{
+      const pd=priOrder[a.priority]-priOrder[b.priority];if(pd!==0)return pd;
+      if(!a.date&&!b.date)return 0;if(!a.date)return 1;if(!b.date)return-1;
+      return a.date.localeCompare(b.date);
+    });
+  }
+  if(sortMode==='date'){
+    return[...arr].sort((a,b)=>{if(!a.date&&!b.date)return 0;if(!a.date)return 1;if(!b.date)return-1;return a.date.localeCompare(b.date);});
+  }
+  if(sortMode==='cat'){
+    return[...arr].sort((a,b)=>a.cat.localeCompare(b.cat));
+  }
+  return arr;
+}
+function setSort(m){
+  sortMode=m;
+  document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('on'));
+  document.getElementById('sort-'+m)?.classList.add('on');
+  render();
+}
+
+/* CREATE */
 async function createEvent(item){
-  const d=item.date||new Date().toISOString().split('T')[0];let start,end;
-  if(item.time){start={dateTime:`${d}T${item.time}:00`,timeZone:'Europe/Rome'};const[h,m]=item.time.split(':');const eh=String((parseInt(h)+1)%24).padStart(2,'0');end={dateTime:`${d}T${eh}:${m}:00`,timeZone:'Europe/Rome'};}
-  else{start={date:d};end={date:d};}
-  const r=await gf(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CAL_ID)}/events`,{method:'POST',body:JSON.stringify({summary:encT(item.cat,item.title),start,end,description:buildNotes(item.priority||2)})});
+  const d=item.date||new Date().toISOString().split('T')[0];
+  const start={dateTime:`${d}T${item.time}:00`,timeZone:'Europe/Rome'};
+  const[h,m]=item.time.split(':');const eh=String((parseInt(h)+1)%24).padStart(2,'0');
+  const end={dateTime:`${d}T${eh}:${m}:00`,timeZone:'Europe/Rome'};
+  const reminders=item.reminder>0?{useDefault:false,overrides:[{method:'popup',minutes:item.reminder}]}:{useDefault:false,overrides:[]};
+  const r=await gf(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CAL_ID)}/events`,{method:'POST',body:JSON.stringify({summary:encT(item.cat,item.title),start,end,description:buildNotes(item.priority||2),reminders})});
   return r.id;
 }
-async function createTask(item){
+async function createTask(item,parentId){
   const lid=await ensureList();
-  const body={title:encT(item.cat,item.title),notes:buildNotes(item.priority||2)};
-  if(item.date)body.due=item.date+'T00:00:00.000Z';
+  const body={title:parentId?item.title:encT(item.cat,item.title),notes:parentId?'':buildNotes(item.priority||2)};
+  if(item.date&&!parentId)body.due=item.date+'T00:00:00.000Z';
+  if(parentId)body.parent=parentId;
   const r=await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks`,{method:'POST',body:JSON.stringify(body)});
   return r.id;
 }
 
-/* ===== UPDATE ===== */
+/* UPDATE */
 async function updateEvent(item){
-  const d=item.date||new Date().toISOString().split('T')[0];let start,end;
-  if(item.time){start={dateTime:`${d}T${item.time}:00`,timeZone:'Europe/Rome'};const[h,m]=item.time.split(':');const eh=String((parseInt(h)+1)%24).padStart(2,'0');end={dateTime:`${d}T${eh}:${m}:00`,timeZone:'Europe/Rome'};}
-  else{start={date:d};end={date:d};}
+  const d=item.date||new Date().toISOString().split('T')[0];
+  let start,end;
+  if(item.time){
+    start={dateTime:`${d}T${item.time}:00`,timeZone:'Europe/Rome'};
+    const[h,m]=item.time.split(':');const eh=String((parseInt(h)+1)%24).padStart(2,'0');
+    end={dateTime:`${d}T${eh}:${m}:00`,timeZone:'Europe/Rome'};
+  }else{start={date:d};end={date:d};}
   await gf(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CAL_ID)}/events/${encodeURIComponent(item.gid)}`,{method:'PUT',body:JSON.stringify({summary:encT(item.cat,item.title),start,end,description:buildNotes(item.priority||2)})});
 }
 async function updateTask(item){
@@ -402,56 +418,92 @@ async function updateTask(item){
   if(item.date)body.due=item.date+'T00:00:00.000Z';
   await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks/${encodeURIComponent(item.gid)}`,{method:'PUT',body:JSON.stringify(body)});
 }
-async function deleteItem(item){
+async function deleteGItem(item){
   if(item.gtype==='event'){await gf(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CAL_ID)}/events/${encodeURIComponent(item.gid)}`,{method:'DELETE'});}
   else{const lid=await ensureList();await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks/${encodeURIComponent(item.gid)}`,{method:'DELETE'});}
 }
+async function deleteSubtask(subGid){
+  const lid=await ensureList();
+  await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks/${encodeURIComponent(subGid)}`,{method:'DELETE'});
+}
+async function completeSubtask(sub){
+  const lid=await ensureList();
+  await gf(`https://tasks.googleapis.com/tasks/v1/lists/${encodeURIComponent(lid)}/tasks/${encodeURIComponent(sub.gid)}`,{method:'PUT',body:JSON.stringify({title:sub.title,status:'completed'})});
+}
 
-/* ===== SAVE NEW ITEM ===== */
+/* SAVE NEW */
+function updateTypeHint(){
+  const time=document.getElementById('newTime').value;
+  const hint=document.getElementById('typeHint');
+  hint.textContent=time?'Con l\'orario verrà creato un Evento in Google Calendar':'Senza orario verrà creata un\'Attività in Google Tasks';
+}
 async function saveNewItem(){
   const title=document.getElementById('newTitle').value.trim();
-  if(!title){document.getElementById('saveMsg').innerHTML='<span class="save-err">Inserisci una descrizione.</span>';return;}
-  if(!isAuth()){document.getElementById('saveMsg').innerHTML='<span class="save-err">Accedi a Google prima.</span>';return;}
-  const btn=document.getElementById('saveBtn');
-  const msg=document.getElementById('saveMsg');
-  btn.disabled=true;msg.innerHTML='Salvataggio...';
+  if(!title){setSmsg('Inserisci una descrizione.','err');return;}
+  if(!isAuth()){setSmsg('Accedi a Google prima.','err');return;}
+  const btn=document.getElementById('saveBtn');btn.disabled=true;setSmsg('Salvataggio...','');
+  const time=document.getElementById('newTime').value;
+  const isEvent=!!time;
   const item={
-    gtype:document.getElementById('newType').value,
+    gtype:isEvent?'event':'task',
     cat:document.getElementById('newCat').value,
     priority:parseInt(document.getElementById('newPri').value),
-    title,
-    date:document.getElementById('newDate').value,
-    time:document.getElementById('newTime').value,
+    title,date:document.getElementById('newDate').value,
+    time,reminder:parseInt(document.getElementById('newReminder').value||'0'),
   };
   try{
-    const nid=item.gtype==='event'?await createEvent(item):await createTask(item);
-    item.gid=nid;item.done=false;item.expanded=false;
+    const nid=isEvent?await createEvent(item):await createTask(item);
+    item.gid=nid;item.done=false;item.expanded=false;item.subtasks=[];
     items.push(item);
-    msg.innerHTML='<span class="save-ok">Salvato!</span>';
+    setSmsg('Salvato!','ok');
     document.getElementById('newTitle').value='';
     document.getElementById('newDate').value='';
     document.getElementById('newTime').value='';
     document.getElementById('newPri').value='2';
-    document.getElementById('newType').value='task';
-    setTimeout(()=>{msg.innerHTML='';showTab('tasks');},800);
-  }catch(e){msg.innerHTML=`<span class="save-err">Errore: ${e.message}</span>`;}
+    document.getElementById('newReminder').value='0';
+    document.getElementById('typeHint').textContent='';
+    setTimeout(()=>{setSmsg('','');showTab('tasks');},800);
+  }catch(e){setSmsg('Errore: '+e.message,'err');}
   btn.disabled=false;
 }
+function setSmsg(txt,cls){const el=document.getElementById('smsg');el.textContent=txt;el.className='smsg'+(cls?' '+cls:'');}
 
-function toggleTimeField(){
-  const isEvent=document.getElementById('newType').value==='event';
-  document.getElementById('timeField').style.opacity=isEvent?'1':'0.4';
+/* ADD SUBTASK */
+async function addSubtask(parentGid){
+  const input=document.getElementById('sub_input_'+parentGid);
+  const title=input?.value.trim();if(!title)return;
+  const parent=items.find(x=>x.gid===parentGid);if(!parent)return;
+  if(parent.gtype==='event'){alert('I sotto-task sono disponibili solo per le Attività.');return;}
+  input.disabled=true;
+  try{
+    const nid=await createTask({title},parentGid);
+    parent.subtasks=parent.subtasks||[];
+    parent.subtasks.push({gid:nid,title,done:false});
+    input.value='';
+    render();
+  }catch(e){alert('Errore: '+e.message);}
+  input.disabled=false;
+}
+async function toggleSubDone(parentGid,subGid){
+  const parent=items.find(x=>x.gid===parentGid);if(!parent)return;
+  const sub=parent.subtasks.find(s=>s.gid===subGid);if(!sub)return;
+  sub.done=true;render();
+  try{await completeSubtask(sub);parent.subtasks=parent.subtasks.filter(s=>s.gid!==subGid);render();}
+  catch(e){sub.done=false;render();alert('Errore: '+e.message);}
+}
+async function removeSubtask(parentGid,subGid){
+  if(!confirm('Eliminare questo sotto-task?'))return;
+  const parent=items.find(x=>x.gid===parentGid);if(!parent)return;
+  try{await deleteSubtask(subGid);parent.subtasks=parent.subtasks.filter(s=>s.gid!==subGid);render();}
+  catch(e){alert('Errore: '+e.message);}
 }
 
-/* ===== RENDER ===== */
+/* RENDER */
 function fmtDate(d,ti){if(!d)return'';const dt=new Date(d+'T'+(ti||'00:00'));const o={day:'numeric',month:'short'};if(ti){o.hour='2-digit';o.minute='2-digit';}return dt.toLocaleDateString('it-IT',o);}
-
 function showTab(t){
   ['tasks','add','cats','settings'].forEach(x=>{document.getElementById('tab-'+x).style.display=x===t?'block':'none';});
   document.querySelectorAll('.nb').forEach((b,i)=>{b.classList.toggle('on',['tasks','add','cats','settings'][i]===t);});
-  if(t==='cats')renderCats();
-  if(t==='tasks')render();
-  if(t==='add')populateCatDropdowns();
+  if(t==='cats')renderCats();if(t==='tasks')render();if(t==='add')populateDropdowns();
 }
 
 function render(){
@@ -466,50 +518,92 @@ function render(){
     if(activeFilter==='task')return t.gtype==='task';
     return t.cat===activeFilter;
   });
+  if(!filtered.length){c.innerHTML='<p class="empty">Nessun elemento.</p>';return;}
+
+  // group by category maintaining sort within each group
+  if(sortMode==='cat'){
+    // flat sorted list, no category grouping
+    const sorted=sortItems(filtered);
+    c.innerHTML=sorted.map(t=>renderTask(t)).join('');
+    return;
+  }
+
+  // group by category
   const byCat={};filtered.forEach(t=>{if(!byCat[t.cat])byCat[t.cat]=[];byCat[t.cat].push(t);});
-  if(!filtered.length){c.innerHTML='<p class="empty">Nessun elemento in questa vista.</p>';return;}
   let html='';
   cats.forEach(({id,label,color})=>{
     const list=byCat[id];if(!list||!list.length)return;
-    const sorted=[...list].sort((a,b)=>a.priority-b.priority);
+    const sorted=sortItems(list);
     html+=`<div class="sec"><div class="sec-hd"><div class="dot" style="background:${color}"></div><span class="sec-lbl">${label}</span><span class="sec-ct">${sorted.length}</span></div>`;
-    sorted.forEach(t=>{
-      const isEd=editingId===t.gid;
-      const pb=t.priority===1?'<span class="badge p1">Urgente</span>':t.priority===2?'<span class="badge p2">Media</span>':'<span class="badge p3">Bassa</span>';
-      const tb=t.gtype==='event'?'<span class="badge b-ev">Evento</span>':'<span class="badge b-tk">Attività</span>';
-      const db=t.date?`<span class="badge b-dt">${t.gtype==='task'&&!t.time?'entro ':''} ${fmtDate(t.date,t.time)}</span>`:'';
-      html+=`<div class="task">
-        <div class="task-top">
-          <div class="chk" onclick="toggleDone('${t.gid}')"></div>
-          <div class="tbody">
-            <div class="ttl">${t.title}</div>
-            <div class="meta">${pb}${tb}${db}</div>
-            <div class="ep ${isEd?'open':''}" id="ep_${t.gid}">
-              <textarea class="etxt" id="etxt_${t.gid}">${t.title}</textarea>
-              <div class="ep-grid3">
-                <div class="ef"><div class="el">Categoria</div><select class="es" id="ecat_${t.gid}">${catOpts(t.cat)}</select></div>
-                <div class="ef"><div class="el">Priorità</div><select class="es" id="epri_${t.gid}"><option value="1" ${t.priority===1?'selected':''}>Urgente</option><option value="2" ${t.priority===2?'selected':''}>Media</option><option value="3" ${t.priority===3?'selected':''}>Bassa</option></select></div>
-                <div class="ef"><div class="el">Tipo</div><select class="es" id="etype_${t.gid}"><option value="task" ${t.gtype==='task'?'selected':''}>Attività</option><option value="event" ${t.gtype==='event'?'selected':''}>Evento</option></select></div>
-              </div>
-              <div class="ep-grid">
-                <div class="ef"><div class="el">Data</div><input type="date" class="ed" id="edate_${t.gid}" value="${t.date}"></div>
-                <div class="ef"><div class="el">Ora</div><input type="time" class="ed" id="etime_${t.gid}" value="${t.time}"></div>
-              </div>
-              <div class="ebtns">
-                <button class="btn-sv" id="esv_${t.gid}" onclick="saveEdit('${t.gid}')">Salva</button>
-                <button class="btn-del" onclick="confirmDelete('${t.gid}')">Elimina</button>
-                <button class="btn-cn" onclick="cancelEdit()">Annulla</button>
-              </div>
-              <div class="emsg" id="emsg_${t.gid}"></div>
-            </div>
-          </div>
-          <div class="tacts"><button class="ta" onclick="startEdit('${t.gid}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button></div>
-        </div>
-      </div>`;
-    });
+    html+=sorted.map(t=>renderTask(t)).join('');
     html+='</div>';
   });
   c.innerHTML=html;
+}
+
+function renderTask(t){
+  const isEd=editingId===t.gid;
+  const pb=t.priority===1?'<span class="badge p1">Urgente</span>':t.priority===2?'<span class="badge p2">Media</span>':'<span class="badge p3">Bassa</span>';
+  const tb=t.gtype==='event'?'<span class="badge b-ev">Evento</span>':'<span class="badge b-tk">Attività</span>';
+  const db=t.date?`<span class="badge b-dt">${fmtDate(t.date,t.time)}</span>`:'';
+  const subCount=t.subtasks?.length||0;
+  const subBadge=subCount>0?`<span class="badge b-sub">${subCount} sotto-task</span>`:'';
+
+  // subtasks
+  let subsHtml='';
+  if(subCount>0&&t.expanded){
+    subsHtml=`<div class="subtasks-list">`;
+    subsHtml+=t.subtasks.map(s=>`
+      <div style="display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:0.5px solid var(--border)">
+        <div class="chk ${s.done?'done':''}" style="width:13px;height:13px;margin-top:0" onclick="toggleSubDone('${t.gid}','${s.gid}')"></div>
+        <span style="flex:1;font-size:12px;color:var(--text2);${s.done?'text-decoration:line-through;color:var(--text3)':''}">${s.title}</span>
+        <button onclick="removeSubtask('${t.gid}','${s.gid}')" style="background:none;border:none;cursor:pointer;color:var(--text3);font-size:11px;padding:0 2px">✕</button>
+      </div>`).join('');
+    // add subtask input
+    subsHtml+=`<div class="addsub-row">
+      <input class="sub-input" id="sub_input_${t.gid}" placeholder="Nuovo sotto-task..." onkeydown="if(event.key==='Enter')addSubtask('${t.gid}')">
+      <button class="btn-sub-add" onclick="addSubtask('${t.gid}')">+ Aggiungi</button>
+    </div>`;
+    subsHtml+='</div>';
+  }else if(t.expanded&&t.gtype==='task'){
+    subsHtml=`<div class="subtasks-list"><div class="addsub-row">
+      <input class="sub-input" id="sub_input_${t.gid}" placeholder="Nuovo sotto-task..." onkeydown="if(event.key==='Enter')addSubtask('${t.gid}')">
+      <button class="btn-sub-add" onclick="addSubtask('${t.gid}')">+ Aggiungi</button>
+    </div></div>`;
+  }
+
+  const expandBtn=t.gtype==='task'?`<button class="sub-toggle" onclick="toggleExp('${t.gid}')">${t.expanded?(subCount>0?'▲ nascondi':'▲ chiudi'):subCount>0?'▼ '+subCount+' sotto-task':'▼ aggiungi sotto-task'}</button>`:'';
+
+  const editPanel=`<div class="ep ${isEd?'open':''}" id="ep_${t.gid}">
+    <textarea class="etxt" id="etxt_${t.gid}">${t.title}</textarea>
+    <div class="ep-fg3">
+      <div class="ef"><div class="el">Categoria</div><select class="es" id="ecat_${t.gid}">${catOpts(t.cat)}</select></div>
+      <div class="ef"><div class="el">Priorità</div><select class="es" id="epri_${t.gid}"><option value="1" ${t.priority===1?'selected':''}>Urgente</option><option value="2" ${t.priority===2?'selected':''}>Media</option><option value="3" ${t.priority===3?'selected':''}>Bassa</option></select></div>
+      <div class="ef"><div class="el">Tipo</div><select class="es" id="etype_${t.gid}"><option value="task" ${t.gtype==='task'?'selected':''}>Attività</option><option value="event" ${t.gtype==='event'?'selected':''}>Evento</option></select></div>
+    </div>
+    <div class="ep-fg">
+      <div class="ef"><div class="el">Data</div><input type="date" class="ed" id="edate_${t.gid}" value="${t.date}"></div>
+      <div class="ef"><div class="el">Ora</div><input type="time" class="ed" id="etime_${t.gid}" value="${t.time}"></div>
+    </div>
+    <div class="ebtns">
+      <button class="btn-sv" id="esv_${t.gid}" onclick="saveEdit('${t.gid}')">Salva</button>
+      <button class="btn-del" onclick="confirmDelete('${t.gid}')">Elimina</button>
+      <button class="btn-cn" onclick="cancelEdit()">Annulla</button>
+    </div>
+    <div class="emsg" id="emsg_${t.gid}"></div>
+  </div>`;
+
+  return`<div class="task">
+    <div class="task-top">
+      <div class="chk" onclick="toggleDone('${t.gid}')"></div>
+      <div class="tbody">
+        <div class="ttl">${t.title}</div>
+        <div class="meta">${pb}${tb}${db}${subBadge}</div>
+        ${expandBtn}${subsHtml}${editPanel}
+      </div>
+      <div class="tacts"><button class="ta" onclick="startEdit('${t.gid}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button></div>
+    </div>
+  </div>`;
 }
 
 function buildFilters(){
@@ -528,20 +622,19 @@ function buildFilters(){
 }
 
 function setFilter(f){activeFilter=f;render();}
+function toggleExp(gid){const t=items.find(x=>x.gid===gid);if(t){t.expanded=!t.expanded;render();}}
 
 async function toggleDone(gid){
   const t=items.find(x=>x.gid===gid);if(!t)return;
   t.done=true;render();
   try{
-    if(t.gtype==='task'){await updateTask(t);}
-    else{await deleteItem(t);}
+    if(t.gtype==='task')await updateTask(t);
+    else await deleteGItem(t);
     items=items.filter(x=>x.gid!==gid);render();
   }catch(e){t.done=false;render();alert('Errore: '+e.message);}
 }
-
 function startEdit(gid){editingId=gid;render();}
 function cancelEdit(){editingId=null;render();}
-
 async function saveEdit(gid){
   const t=items.find(x=>x.gid===gid);if(!t)return;
   const btn=document.getElementById('esv_'+gid),msg=document.getElementById('emsg_'+gid);
@@ -552,28 +645,22 @@ async function saveEdit(gid){
   const ntype=document.getElementById('etype_'+gid).value==='event'?'event':'task';
   const nd=document.getElementById('edate_'+gid).value;
   const nti=document.getElementById('etime_'+gid).value;
-  const oldType=t.gtype;const oldGid=t.gid;
+  const oldType=t.gtype,oldGid=t.gid;
   t.title=nt;t.cat=nc;t.priority=np;t.gtype=ntype;t.date=nd;t.time=nti;
   try{
-    if(oldType!==ntype){
-      await deleteItem({...t,gtype:oldType,gid:oldGid});
-      const nid=ntype==='event'?await createEvent(t):await createTask(t);
-      t.gid=nid;
-    }else{
-      if(ntype==='event')await updateEvent(t);else await updateTask(t);
-    }
+    if(oldType!==ntype){await deleteGItem({...t,gtype:oldType,gid:oldGid});const nid=ntype==='event'?await createEvent(t):await createTask(t);t.gid=nid;}
+    else{if(ntype==='event')await updateEvent(t);else await updateTask(t);}
     editingId=null;render();
   }catch(e){msg.textContent='Errore: '+e.message;if(btn)btn.disabled=false;}
 }
-
 async function confirmDelete(gid){
   if(!confirm('Eliminare questo elemento da Google?'))return;
   const t=items.find(x=>x.gid===gid);if(!t)return;
-  try{await deleteItem(t);items=items.filter(x=>x.gid!==gid);editingId=null;render();}
+  try{await deleteGItem(t);items=items.filter(x=>x.gid!==gid);editingId=null;render();}
   catch(e){alert('Errore: '+e.message);}
 }
 
-/* ===== CATEGORIES PANEL ===== */
+/* CATEGORIES PANEL */
 function renderCats(){
   document.getElementById('catList').innerHTML=cats.map((c,i)=>`
     <div class="ci">
@@ -582,29 +669,26 @@ function renderCats(){
       <button class="cd" onclick="deleteCat(${i})"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>`).join('');
 }
-function updateCatColor(i,v){cats[i].color=v;saveCats();renderCats();populateCatDropdowns();render();}
-function updateCatName(i,v){if(v.trim()){cats[i].label=v.trim();saveCats();renderCats();populateCatDropdowns();render();}}
-function deleteCat(i){if(items.some(t=>t.cat===cats[i].id&&!t.done)){alert('Categoria con elementi attivi. Spostali prima.');return;}if(!confirm('Eliminare "'+cats[i].label+'"?'))return;cats.splice(i,1);saveCats();renderCats();populateCatDropdowns();render();}
-function addCategory(){const name=document.getElementById('newCatName').value.trim();const color=document.getElementById('newCatColor').value;if(!name)return;cats.push({id:'c'+Date.now(),label:name,color});document.getElementById('newCatName').value='';saveCats();renderCats();populateCatDropdowns();render();}
+function updateCatColor(i,v){cats[i].color=v;saveCats();renderCats();populateDropdowns();render();}
+function updateCatName(i,v){if(v.trim()){cats[i].label=v.trim();saveCats();renderCats();populateDropdowns();render();}}
+function deleteCat(i){if(items.some(t=>t.cat===cats[i].id&&!t.done)){alert('Categoria con elementi attivi.');return;}if(!confirm('Eliminare "'+cats[i].label+'"?'))return;cats.splice(i,1);saveCats();renderCats();populateDropdowns();render();}
+function addCategory(){const name=document.getElementById('newCatName').value.trim();const color=document.getElementById('newCatColor').value;if(!name)return;cats.push({id:'c'+Date.now(),label:name,color});document.getElementById('newCatName').value='';saveCats();renderCats();populateDropdowns();render();}
 
-/* ===== MIC ===== */
+/* MIC */
 let recog=null,isRec=false;
 document.getElementById('micBtn').addEventListener('click',()=>{
-  if(!('webkitSpeechRecognition'in window)&&!('SpeechRecognition'in window)){
-    document.getElementById('micLabel').textContent='Non supportato';return;
-  }
+  if(!('webkitSpeechRecognition'in window)&&!('SpeechRecognition'in window)){document.getElementById('micLbl').textContent='Non supportato';return;}
   if(isRec){recog.stop();return;}
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   recog=new SR();recog.lang='it-IT';recog.continuous=false;recog.interimResults=false;
-  recog.onstart=()=>{isRec=true;document.getElementById('micBtn').classList.add('rec');document.getElementById('micLabel').textContent='In ascolto...';};
+  recog.onstart=()=>{isRec=true;document.getElementById('micBtn').classList.add('rec');document.getElementById('micLbl').textContent='In ascolto...';};
   recog.onresult=e=>{document.getElementById('newTitle').value=e.results[0][0].transcript;};
-  recog.onerror=()=>{document.getElementById('micLabel').textContent='Errore mic';};
-  recog.onend=()=>{isRec=false;document.getElementById('micBtn').classList.remove('rec');document.getElementById('micLabel').textContent='Parla';};
+  recog.onerror=()=>{document.getElementById('micLbl').textContent='Errore';};
+  recog.onend=()=>{isRec=false;document.getElementById('micBtn').classList.remove('rec');document.getElementById('micLbl').textContent='Parla';};
   recog.start();
 });
 
-/* ===== INIT ===== */
-populateCatDropdowns();
+populateDropdowns();
 handleCallback();
 </script>
 </body>
