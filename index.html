@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Task Manager — Terme San Giovanni</title>
+<title>Task Manager — Giulio Romano</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -188,7 +188,7 @@ input.new-cat-name::placeholder{color:var(--text3)}
     </div>
     <div>
       <div class="app-title">Task Manager</div>
-      <div class="app-sub">Terme San Giovanni — F&B</div>
+      <div class="app-sub">Il mio task manager</div>
     </div>
     <div class="header-right" id="headerRight">
       <span class="gcal-status gcal-off" id="gcalBadge">Google non connesso</span>
@@ -336,7 +336,7 @@ let pending = [];
 /* ===== GOOGLE AUTH ===== */
 function googleLogin(){
   const calId = localStorage.getItem(STORAGE_CALID) || 'giulioromano85@gmail.com';
-  const redirectUri = location.href.split('?')[0].split('#')[0];
+  const redirectUri = 'https://giulioromano85-ai.github.io/task-manager/';
   const url = 'https://accounts.google.com/o/oauth2/v2/auth?' + new URLSearchParams({
     client_id: CLIENT_ID,
     redirect_uri: redirectUri,
@@ -396,7 +396,7 @@ function scheduleRenew(expiresIn){
 }
 
 function silentRenew(){
-  const redirectUri = location.href.split('?')[0].split('#')[0];
+  const redirectUri = 'https://giulioromano85-ai.github.io/task-manager/';
   const url = 'https://accounts.google.com/o/oauth2/v2/auth?' + new URLSearchParams({
     client_id: CLIENT_ID,
     redirect_uri: redirectUri,
